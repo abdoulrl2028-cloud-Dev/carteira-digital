@@ -1,0 +1,134 @@
+.new-transaction-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding-bottom: 40px;
+}
+
+.transaction-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.transaction-form {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn-back {
+  margin-bottom: 24px;
+}
+
+.type-selector {
+  margin-bottom: 30px;
+}
+
+.type-selector label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--dark);
+}
+
+.type-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.type-btn {
+  padding: 12px 20px;
+  border: 2px solid var(--border);
+  background: white;
+  color: var(--dark);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.type-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.type-btn.active {
+  color: white;
+  border: none;
+}
+
+.type-btn.active.income {
+  background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
+}
+
+.type-btn.active.expense {
+  background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+}
+
+.transaction-form .form-group {
+  margin-bottom: 24px;
+}
+
+.transaction-form .form-group label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--dark);
+}
+
+.transaction-form input,
+.transaction-form select,
+.transaction-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.transaction-form input:focus,
+.transaction-form select:focus,
+.transaction-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.transaction-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.transaction-form .btn-primary {
+  margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+  .transaction-form {
+    padding: 24px;
+  }
+
+  .transaction-form-container {
+    padding: 20px 12px;
+  }
+
+  .type-buttons {
+    grid-template-columns: 1fr;
+  }
+}

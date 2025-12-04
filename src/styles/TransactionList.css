@@ -1,0 +1,135 @@
+.transaction-list {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.transaction-list table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.transaction-list thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.transaction-list th {
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.transaction-list td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.transaction-list tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.transaction-list tbody tr:hover {
+  background-color: rgba(102, 126, 234, 0.05);
+}
+
+.transaction-list tbody tr.transaction-row.income {
+  border-left: 4px solid var(--success);
+}
+
+.transaction-list tbody tr.transaction-row.expense {
+  border-left: 4px solid var(--danger);
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge.income {
+  background: rgba(76, 175, 80, 0.2);
+  color: #2e7d32;
+}
+
+.badge.expense {
+  background: rgba(244, 67, 54, 0.2);
+  color: #c62828;
+}
+
+.amount {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.amount.income {
+  color: var(--success);
+}
+
+.amount.expense {
+  color: var(--danger);
+}
+
+.btn-delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-delete:hover {
+  background: rgba(244, 67, 54, 0.1);
+  transform: scale(1.15);
+}
+
+@media (max-width: 768px) {
+  .transaction-list {
+    overflow-x: auto;
+  }
+
+  .transaction-list table {
+    font-size: 12px;
+  }
+
+  .transaction-list th,
+  .transaction-list td {
+    padding: 10px 8px;
+  }
+
+  .badge {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+
+  .amount {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .transaction-list table {
+    font-size: 11px;
+  }
+
+  .transaction-list th,
+  .transaction-list td {
+    padding: 8px 4px;
+  }
+
+  .badge {
+    font-size: 9px;
+    padding: 2px 6px;
+  }
+}
